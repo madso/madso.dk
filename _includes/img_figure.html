@@ -1,0 +1,4 @@
+<figure>
+	<a href="{{ site.url }}{{ site.baseurl }}/assets/images/{{ page.tags[0] }}/{{ page.title | downcase | replace: " ", "-" | replace: ",", "" | replace: "æ", "ae" | replace: "&-", ""}}-{{include.idx}}.jpg"><img src="{{ site.url }}{{ site.baseurl }}/assets/images/{{ page.tags[0] }}/{{ page.title | downcase | replace: " ", "-" | replace: ",", "" | replace: "æ", "ae" | replace: "&-", ""}}-{{include.idx}}.jpg" /></a>
+	<figcaption>{{ include.caption }}</figcaption>
+</figure>

@@ -1,0 +1,11 @@
+{% if page.header.map.path contains "://" %}
+  {% capture map_path %}{{ page.header.map.path }}{% endcapture %}
+{% endif %}
+
+{% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
+
+{% if page.header.map.path "://" %}
+<div class="page__map" style="height:300px; width:100%; display:inline-block; overflow:hidden;">
+<iframe class="custom-google-map" style="position:relative; top:-50px; border:none;" src="{{ map_path }}" width="100%" height="300"></iframe>
+</div>
+{% endif %}

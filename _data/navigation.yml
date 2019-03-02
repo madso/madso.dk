@@ -1,7 +1,15 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "USA 2012"
+    url: /usa2012/
+  - title: "NZ 2011"
+    url: /nz2011/
+  - title: rejser
+    subfolderitems:
+      - page: Thing 1
+        url: /usa2012/
+      - page: Thing 2
+        url: /about/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

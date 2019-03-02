@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+{% if page.header.map %}
+  {% include page__map.html %}
+{% endif %}
+
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+<div id="main" role="main" >
+  {% include sidebar.html %}
+
+  <div class="archive" {% if page.header.map %}style="margin-top:-50px;"{% endif %}>
+    {% unless page.header.overlay_color or page.header.overlay_image %}
+      <h1 id="page-title" class="page__title">{{ page.title }}</h1>
+    {% endunless %}
+    {{ content }}
+    <div class="entries-{{ page.entries_layout }}">
+      {% include documents-collection.html collection=page.collection sort_by=page.sort_by sort_order=page.sort_order type=page.entries_layout %}
+    </div>
+  </div>
+</div>
